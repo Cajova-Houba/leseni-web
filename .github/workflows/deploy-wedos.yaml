@@ -1,0 +1,33 @@
+# basic github actions workflow
+# https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
+name: Deploy to wedos
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    name: Deploy to wedos
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Prepare for deployment
+        run: |
+          mkdir dist
+          cp -r src/*.html dist/
+          cp -r src/*.php dist/
+          cp -r src/css/*.css dist/
+          cp -r src/css/*.map dist/
+          cp -r src/js dist/
+          cp -r src/img dist/
+      - name: Upload via FTP
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          forceSsl: true
+          host: ${{ secrets.FTP_HOST }}
+          user: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          remoteDir: ${{ vars.FTP_REMOTE_FOLDER }}
+          localDir: 'dist/'
