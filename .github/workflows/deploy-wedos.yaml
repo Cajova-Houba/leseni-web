@@ -5,7 +5,7 @@ name: Deploy to wedos
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   deploy:
     name: Deploy to wedos
