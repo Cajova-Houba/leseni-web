@@ -1,0 +1,66 @@
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*
+ Variables
+*/
+
+:root {
+    --main-dark: #000000;
+    --main-dark-accent: #0F1B20;
+    --main-accent: #FF6329;
+    --main-light: #d5e5eb;
+
+    --main-background: #FFFFFF;
+    --main-text: #333333;
+
+    --bs-nav-link-font-size: 1.5rem;
+}
+
+body { 
+    padding-top: 2rem; 
+    font-family: 'Barlow', sans-serif;
+}
+
+.bg-main-dark {
+    background-color: var(--main-dark);
+    color: var(--main-dark-accent);
+}
+
+.bg-main-dark-2 {
+    background-color: var(--main-dark-accent);
+    color: var(--main-dark);
+}
+
+.bg-main-light {
+    background-color: var(--main-light);
+    color: var(--main-dark-accent);
+}
+
+.font-orange {
+    color: var(--main-accent);
+}
+
+.font-dark-2 {
+    color: var(--main-dark-accent);
+}
+
+.img-logo {
+    max-width: 20%;
+    height: auto;
+}
+
+.img-logo-wide {
+    max-width: 80%;
+    height: auto;
+}
+
+.nav-link:hover {
+    color: var(--main-accent)
+}
+
+.nav-link:focus {
+    color: var(--main-accent)
+}
+
