@@ -33,13 +33,23 @@ if (galleryContainer) {
   for (let rowId = 0; rowId < rowCount; rowId++) {
     galleryContainerHtml += "<div class=\"row justify-content-center\">" ;
     for (let rowImageId = 0; rowImageId < GALLERY_IMAGES_PER_ROW; rowImageId++) {
-        const imageName = imageId < 10 ? "0" + imageId + ".jpeg" : imageId + ".jpeg";
 
-        galleryContainerHtml += `
-          <div class="col-lg-3 col-md-6 pb-4">
-            <img src="images/gallery/${imageName}" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#imageModal">
-          </div>
-        `
+        if (imageId > GALLERY_IMAGE_COUNT) {
+
+          // fill empty space
+          galleryContainerHtml += "<div class=\"col-lg-3 col-md-6 pb-4\"></div>";
+        } else {
+          // display image
+
+          // image name with leading zero
+          const imageName = imageId < 10 ? "0" + imageId + ".jpeg" : imageId + ".jpeg";
+  
+          galleryContainerHtml += `
+            <div class="col-lg-3 col-md-6 pb-4">
+              <img src="images/gallery/${imageName}" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#imageModal">
+            </div>
+          `
+        }
 
         imageId += 1;
     }
