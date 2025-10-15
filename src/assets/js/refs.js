@@ -46,7 +46,7 @@ if (galleryContainer) {
   
           galleryContainerHtml += `
             <div class="col-lg-3 col-md-6 pb-4">
-              <img src="images/gallery/${imageName}" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#imageModal">
+              <img src="images/thumbnails/${imageName}" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#imageModal">
             </div>
           `
         }
