@@ -13,7 +13,7 @@ if (imageModal) {
         // Element that triggered the modal
         const triggerElement = event.relatedTarget
         // Extract info from data-bs-* attributes
-        const imgSource = triggerElement.getAttribute('src')
+        const imgSource = triggerElement.getAttribute('data-bs-src')
         // If necessary, you could initiate an Ajax request here
         // and then do the updating in a callback.
 
@@ -46,7 +46,7 @@ if (galleryContainer) {
   
           galleryContainerHtml += `
             <div class="col-lg-3 col-md-6 pb-4">
-              <img src="images/thumbnails/${imageName}" class="img-thumbnail" data-bs-toggle="modal" data-bs-target="#imageModal">
+              <img src="images/thumbnails/${imageName}" class="img-thumbnail" data-bs-src="images/gallery/${imageName}" data-bs-toggle="modal" data-bs-target="#imageModal">
             </div>
           `
         }
