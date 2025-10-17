@@ -25,7 +25,7 @@ function render_pagination_controls(int $totalPages, int $page): void {
     // previous
     $prevClass = ($page <= 1) ? ' page-item disabled' : ' page-item';
     $prevLink = htmlspecialchars($baseUrl . 'page=' . max(1, $page - 1));
-    echo "    <li class=\"{$prevClass}\"><a class=\"page-link\" href=\"{$prevLink}\" tabindex=\"-1\">&laquo; Prev</a></li>\n";
+    echo "    <li class=\"{$prevClass}\"><a class=\"page-link\" href=\"{$prevLink}\" tabindex=\"-1\">&laquo; Předchozí</a></li>\n";
 
     // page numbers (limit to reasonable range if many pages)
     for ($p = 1; $p <= $totalPages; $p++) {
@@ -37,7 +37,7 @@ function render_pagination_controls(int $totalPages, int $page): void {
     // next
     $nextClass = ($page >= $totalPages) ? ' page-item disabled' : ' page-item';
     $nextLink = htmlspecialchars($baseUrl . 'page=' . min($totalPages, $page + 1));
-    echo "    <li class=\"{$nextClass}\"><a class=\"page-link\" href=\"{$nextLink}\">Next &raquo;</a></li>\n";
+    echo "    <li class=\"{$nextClass}\"><a class=\"page-link\" href=\"{$nextLink}\">Následující &raquo;</a></li>\n";
 
     echo "  </ul>\n";
     echo "</nav>\n";
