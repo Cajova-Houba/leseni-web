@@ -83,7 +83,7 @@
         <div class="container-fluid">
           <h2 class="display-6 fw-semibold">Reference</h2>
           
-          <div id="galleryContainer2">
+          <div id="galleryContainer">
             <?php include __DIR__ . '/gallery_images.php'; ?>
           </div>
         </div>

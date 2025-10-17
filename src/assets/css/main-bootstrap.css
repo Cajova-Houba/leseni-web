@@ -64,3 +64,23 @@ body {
     color: var(--main-accent)
 }
 
+/*
+    Override Bootstrap pagination
+*/
+
+.page-link {
+    color: var(--main-dark-accent);
+}
+
+.page-link:hover {
+    color: var(--main-accent);
+    background-color: var(--main-background);
+    border-color: var(--main-accent);
+}
+
+.active .page-link {
+    background-color: var(--main-accent) !important;
+    border-color: var(--main-accent);
+    color: var(--main-dark-accent);
+}
+
