@@ -45,7 +45,7 @@
                             <a class="nav-link" href="service.html">Nabídka</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="refs.html">Reference</a>
+                            <a class="nav-link active" href="refs.php">Reference</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Kontakt</a>
