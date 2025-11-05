@@ -1,0 +1,12 @@
+
+footer .socials-link {
+    font-size: 1.2em;
+}
+
+footer .socials-link a {
+    color: var(--bs-secondary-color);
+}
+
+.socials-link a:hover {
+    color: var(--main-accent);
+}
