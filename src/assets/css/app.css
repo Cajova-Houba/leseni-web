@@ -21,3 +21,14 @@ footer .socials-link a {
     color: var(--main-text);
     opacity: 0.9;
 }
+
+.navbar .socials-link {
+    color: var(--main-accent);
+    font-size: 2.5rem;
+    opacity: 0.9;
+}
+
+.navbar .socials-link:hover {
+    color: var(--main-accent);
+    opacity: 1;
+}
