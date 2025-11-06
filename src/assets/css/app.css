@@ -10,3 +10,14 @@ footer .socials-link a {
 .socials-link a:hover {
     color: var(--main-accent);
 }
+
+.btn-socials {
+    background-color: var(--main-text);
+    color: var(--main-background);
+}
+
+.btn-socials:hover {
+    background-color: var(--main-accent);
+    color: var(--main-text);
+    opacity: 0.9;
+}
